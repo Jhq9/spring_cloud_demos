@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: zuul
+server:
+  port: 8080
+zuul:
+  routes:
+    eureka-consumer-feign:
+      path: /eureka-consumer-feign/**
+      serviceId: eureka-consumer-feign
+    eureka-consumer-ribbon:
+      path: /eureka-consumer-ribbon/**
+      serviceId: eureka-consumer-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8084/eureka/

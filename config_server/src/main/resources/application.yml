@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: http://git.oschina.net/jhq9/config-repo/
+          username: jhq9
+          password: whyjhqlove512
+          search-paths: shared
+server:
+  port: 8093
+eureka:
+  client:
+    service-url:
+     defaultZone: http://localhost:8084/eureka/
+

@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: turbine
+server:
+  port: 8081
+management:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8084/eureka/
+turbine:
+  app-config: eureka-consumer-ribbon-hystrix
+  combine-host-port: true

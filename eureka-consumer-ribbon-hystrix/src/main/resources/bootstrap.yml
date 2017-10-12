@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: eureka-consumer-ribbon-hystrix
+  cloud:
+    config:
+      uri: http://localhost:8093/
+      profile: default
+      label: master
+server:
+  port: 8085
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8084/eureka/
